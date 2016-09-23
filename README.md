@@ -4,6 +4,11 @@ You can try this container at low cost.
 
 # Usage
 
+For dynamic mock-up, you must do 3 step.
+* container instantiate.
+* module registration
+* replace mock module
+
 You must instantiate container on your application.
 
 ```javascript
