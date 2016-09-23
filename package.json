@@ -9,8 +9,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build" : "babel src -d lib",
-    "build:watch" : "babel src -w -d lib"
+    "build": "babel src -d lib",
+    "build:watch": "babel src -w -d lib",
+    "format": "esformatter -i src/**/*.js "
   },
   "repository": {
     "type": "git",
