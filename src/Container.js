@@ -8,12 +8,12 @@ const ContainerFactory = function() {
   }
 };
 
-class Container{
-  constructor(){
+class Container {
+  constructor() {
     this.initialize();
   }
-  initialize(){
-    this.container=ContainerFactory();
+  initialize() {
+    this.container = ContainerFactory();
   }
   registorComponent(container) {
     return (key) => (target) => {
@@ -21,8 +21,8 @@ class Container{
       return (...args) => (container.get('Container')().get(record))(...args);
     };
   }
-  getExportModule(){
-    const container=this.container;
+  getExportModule() {
+    const container = this.container;
     const Component = (key) => (process.env.NODE_ENV === 'production') ? target => target : this.registorComponent(container)(key);
     const FunctionComponent = (target) => (process.env.NODE_ENV === 'production') ? target : Component(target.name)(target);
     const ClassComponent = (target) => (process.env.NODE_ENV === 'production') ? target : Component(target.name)((...args) => new target(...args));
