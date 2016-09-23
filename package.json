@@ -9,7 +9,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "build" : "babel src -d lib"
+    "build" : "babel src -d lib",
+    "build:watch" : "babel src -w -d lib"
   },
   "repository": {
     "type": "git",
